@@ -10,9 +10,9 @@ jobs:
    runs-on: ubuntu-latest
    environment: github-pages
    steps:
-     -user: actions/checkout@v4
-     -uses: action/upload-pages-artifact@v3
-     with:
-       path: .
-     -uses: action/deploy-pages@v4
+     - uses: actions/checkout@v4
+     - uses: action/upload-pages-artifact@v3
+       with:
+         path: .
+     - uses: action/deploy-pages@v4
    
