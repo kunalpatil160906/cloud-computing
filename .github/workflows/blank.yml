@@ -3,8 +3,10 @@ on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    environment: production
     steps:
      - uses: actions/checkout@v4
-     - run : echo "depolying, because this is main"
- 
+     - name: Deploy
+       env:
+         TOKEN: ${{ secrets .DEPLOY_TOKEN }}
+       run: echo "Deploying to production"
