@@ -11,7 +11,7 @@ jobs:
    environment: github-pages
    steps:
      - uses: actions/checkout@v4
-     - uses: action/upload-pages-artifact@v3
+     - uses: actions/upload-pages-artifact@v3
        with:
          path: .
      - uses: action/deploy-pages@v4
