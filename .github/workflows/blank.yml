@@ -13,6 +13,6 @@ jobs:
      -user: actions/checkout@v4
      -uses: action/upload-pages-artifact@v3
      with:
-       path: 
+       path: .
      -uses: action/deploy-pages@v4
    
