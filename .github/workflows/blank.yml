@@ -2,7 +2,7 @@ name: Deploy pages
 on: 
   push:
     branches: [master]
-permissions: :
+permissions: 
   pages: write
   id-token: write
 jobs:
