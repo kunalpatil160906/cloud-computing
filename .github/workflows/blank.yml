@@ -2,10 +2,9 @@ name: CI
 on: push
 jobs:
   deploy:
-    needs: test
-   runs-on: ubuntu-latest
-   if: github.ref == 'refs/heads/main'
-   steps:
-    - uses: actions/checkout@v4
-    - run : echo "depolying, because this is main"
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+     - uses: actions/checkout@v4
+     - run : echo "depolying, because this is main"
  
