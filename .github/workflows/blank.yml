@@ -1,14 +1,14 @@
 name: CI
 on: push
 jobs:
-test:
-runs-on: ubuntu-latest
-steps:
--u uses: action/checkout@v4
--run : echo "running tests"concurrency: 
-deploy:
-needs: test 
-runs-on: ubuntu-latest
-steps:
--uses: action/chakeout@v4
--run :echo "depoying to production"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v4
+      - run : echo "running tests"
+  deploy:
+     needs: test 
+     runs-on: ubuntu-latest
+     steps:
+      - uses: action/chakeout@v4
+      - run: echo "depoying to production"
