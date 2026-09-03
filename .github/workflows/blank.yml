@@ -1,12 +1,11 @@
-name: CI
-on: push
+name: Deploy
+on:
+   workflow_dispatch:
+   push:
+     branches: [master]
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: production
     steps:
-     - uses: actions/checkout@v4
-     - name: Deploy
-       env:
-         TOKEN: ${{ secrets .DEPLOY_TOKEN }}
-       run: echo "Deploying to production"
+      - uses: actions/checkout@v4
+      - run: echo "Deployed"
